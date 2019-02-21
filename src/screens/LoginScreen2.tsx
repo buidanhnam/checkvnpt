@@ -109,7 +109,6 @@ export default class LoginScreen2 extends Component<Props, State> {
                     <View
                         style={{
                             height: 30,
-                            width: 100,
                             marginTop: 30,
                             marginLeft: 50,
                             marginRight: 50,
@@ -150,7 +149,6 @@ export default class LoginScreen2 extends Component<Props, State> {
                     <View
                         style={{
                             height: 30,
-                            width: 200,
                             marginTop: 10,
                             marginLeft: 50,
                             marginRight: 50,

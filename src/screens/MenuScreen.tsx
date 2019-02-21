@@ -70,7 +70,7 @@ export default class MEnuSCreen extends Component<Props, State> {
                     />
                     <Text style={[styles.titleToolbar]}>Thông tin chung</Text>
                 </View>
-                <ScrollView>
+                {/*<ScrollView>*/}
                     {this.renderInfoUser(this.props.isLogin)}
                     {this.renderLine(this.props.isLogin)}
                     {this.renderItemSell(this.props.isLogin)}
@@ -167,21 +167,22 @@ export default class MEnuSCreen extends Component<Props, State> {
                     <View style={[styles.viewLine]}/>
                     {this.renderItemLoginLogOut(this.props.isLogin)}
                     <View style={[styles.viewLine]}/>
-                    <Image
-                        style={{
-                            width: "100%",
-                            height: 140,
-                            marginTop: 10
-                            // position: "absolute",
-                            // bottom: 0,
-                            // left: 0,
-                            // right: 0
-                        }}
-                        resizeMethod='auto'
-                        resizeMode="cover"
-                        source={require("../images/bg_menu.png")}
-                    />
-                </ScrollView>
+                       {this.props.isLogin ? null :
+                           <Image
+                               style={{
+                                   width: "100%",
+                                   height: 140,
+                                   position: "absolute",
+                                   bottom: 0,
+                                   left: 0,
+                                   right: 0,
+                               }}
+                               resizeMethod='auto'
+                               resizeMode="cover"
+                               source={require("../images/bg_menu.png")}
+                           />
+                }
+                {/*</ScrollView>*/}
 
             </SafeAreaView>
         );
@@ -200,7 +201,7 @@ export default class MEnuSCreen extends Component<Props, State> {
                             width: 25,
                             height: 25
                         }}
-                        source={require("../images/ic_carted.png")}
+                        source={require("../images/icon_cart.png")}
                     />
                     <Text style={{
                         color: "blue",
